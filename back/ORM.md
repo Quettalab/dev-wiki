@@ -1,4 +1,4 @@
-# Node에서 주로 사용되는 ORM에 대해 알아보고자 한다.
+# 자바스크립트에서 주로 사용되는 ORM에 대해 알아보고 그중 사용하기 적합한 ORM을 선택하고자 한다.
 
 아래 그림은 ossinsight.io에서 Javascript ORM의 Stars 수에 대하여 순위를 매긴 이미지이다.
 ![javascript ORM - Stars](https://github.com/user-attachments/assets/0d69ef3a-e605-401c-b913-72ce4c6e2ece)
