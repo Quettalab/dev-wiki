@@ -62,3 +62,48 @@ module.exports = {
 ```bash
 npm run lint 
 ```
+
+### Prettier 설정법
+1. Prettier와 관련된 패키지 설치
+```bash
+npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
+```
+2. `.prettierrc` 파일 생성 후, 내용 추가
+```json
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "printWidth": 100,
+  "tabWidth": 2,
+  "semi": true
+}
+```
+3. `.eslintrc.js` 파일 수정
+```javascript
+module.exports = {
+  ...
+  
+  extends: [
+    'eslint:recommended',
+    'google',
+    'plugin:prettier/recommended',  // 이 줄 추가
+  ],
+  
+  rules: {
+    // ESLint 규칙 중 Prettier와 충돌할 수 있는 규칙들은 비활성화
+    'indent': 'off',
+    'object-curly-spacing': 'off',
+    'comma-dangle': 'off',
+  },
+  
+  ...
+};
+```
+4. `package.json`에 코드 추가
+```json
+"scripts": {
+  "lint": "eslint .",
+  "lint:fix": "eslint . --fix",
+  "format": "prettier --write ."  // 이 줄 추가
+}
+```
