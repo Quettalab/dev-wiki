@@ -72,7 +72,7 @@ npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
 ```json
 {
   "singleQuote": true,
-  "trailingComma": "es5",
+  "trailingComma": "all",
   "printWidth": 100,
   "tabWidth": 2,
   "semi": true
